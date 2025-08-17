@@ -2,7 +2,55 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
+    & > * {
+      width: 100%;
+    }
 }
+
+.website-banner {
+  background-color: rgb(32, 32, 32);
+  color: white;
+  height: 15vh;
+  position: fixed;
+  inset: 0 0 auto 0;
+  display: flex;
+  flex-flow: row wrap;
+  /*transition: transform 0.3s ease;*/
+    & > * {
+      color: rgb(255, 255, 255);
+      display: inherit;
+      align-items: center;
+      width: 100%;
+      font-family: "roboto_condensedbold", Arial, sans-serif;
+      text-transform: uppercase;
+    }
+    & > * a {
+      text-decoration: none;
+      color: inherit;
+    }
+}
+
+/*
+.website-banner-hidden {
+  transform: translateY(-100%);
+}
+*/
+
+.top-bar {
+  border-bottom: 1px solid rgb(118, 118, 118);
+  justify-content: space-between;
+  height: 65%;
+}
+
+.navbar {
+  justify-content: space-evenly;
+  height: 35%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+
 
 
 
