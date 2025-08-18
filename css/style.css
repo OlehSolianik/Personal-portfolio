@@ -15,7 +15,8 @@ html, body {
   inset: 0 0 auto 0;
   display: flex;
   flex-flow: row wrap;
-  /*transition: transform 0.3s ease;*/
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
     & > * {
       color: rgb(255, 255, 255);
       display: inherit;
@@ -23,23 +24,17 @@ html, body {
       width: 100%;
       font-family: "roboto_condensedbold", Arial, sans-serif;
       text-transform: uppercase;
-    }
-    & > * a {
+      a {
       text-decoration: none;
       color: inherit;
+      }
     }
 }
 
-/*
-.website-banner-hidden {
-  transform: translateY(-100%);
-}
-*/
-
 .top-bar {
-  border-bottom: 1px solid rgb(118, 118, 118);
-  justify-content: space-between;
-  height: 65%;
+border-bottom: 1px solid rgb(118, 118, 118);
+justify-content: space-between;
+height: 65%;
 }
 
 .navbar {
@@ -47,6 +42,10 @@ html, body {
   height: 35%;
   width: 50%;
   margin: 0 auto;
+}
+
+main {
+  margin-top: 15vh;
 }
 
 
