@@ -2,15 +2,15 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: "roboto_condensedbold", Arial, sans-serif;
+  font-family: "Poppins-Regular", Century Gothic, sans-serif;
     & > * {
       width: 100%;
     }
 }
 
-.website-banner {
+#website-banner {
   background-color: rgb(32, 32, 32);
-  color: white;
+  color: rgb(255, 255, 255);
   height: 15vh;
   position: fixed;
   inset: 0 0 auto 0;
@@ -18,31 +18,37 @@ html, body {
   flex-flow: row wrap;
   transition: transform 0.3s ease-in-out;
   transform: translateY(0);
-  border-bottom: 1px solid rgb(118, 118, 118);
     & > * {
       color: rgb(255, 255, 255);
-      display: inherit;
-      align-items: center;
-      width: 100%;    
+      width: 100%;  
+      display: flex;
+      align-items: center;  
       text-transform: uppercase;
       a {
       text-decoration: none;
-      color: inherit;
+      color: rgb(255, 255, 255);
       }
     }
 }
 
-.top-bar {
+#top-bar {
   border-bottom: 1px solid rgb(118, 118, 118);
-  justify-content: space-between;
+  justify-content: center;
   height: 65%;
 }
 
-.navbar {
+#navbar {
   justify-content: space-evenly;
   height: 35%;
-  width: 50%;
   margin: 0 auto;
+    & ul {
+      width: 50%;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+    }
 }
 
 main {
