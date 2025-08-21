@@ -1,0 +1,68 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Poppins-Regular", Century Gothic, sans-serif;
+  font-size: 16px;
+    & > * {
+      width: 100%;
+    }
+}
+
+#website-banner {
+  background-color: rgb(32, 32, 32);
+  color: rgb(255, 255, 255);
+  height: 15vh;
+  position: fixed;
+  inset: 0 0 auto 0;
+  display: flex;
+  flex-flow: row wrap;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+    & > * {
+      color: rgb(255, 255, 255);
+      width: 100%;  
+      display: flex;
+      align-items: center;  
+      text-transform: uppercase;
+    }
+}
+
+#top-bar {
+  border-bottom: 1px solid rgb(118, 118, 118);
+  justify-content: center;
+  height: 65%;
+}
+
+#navbar {
+  height: 35%;
+  margin: 0 auto;
+    & ul {
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row wrap;
+      gap: clamp(0.5rem, 1rem, 2rem);
+      font-size: clamp(0.5rem, 1rem, 2rem);;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      }
+    }
+}
+
+main {
+  margin-top: 15vh;
+}
+
+
+
+
+
+
+
+
