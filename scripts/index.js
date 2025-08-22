@@ -1,4 +1,4 @@
-const websiteBanner = document.querySelector('.website-banner');
+const websiteBanner = document.getElementById('website-banner');
 const bannerTrigger = document.querySelector('.banner-trigger'); 
 
 let lastScrollPosition = window.scrollY;
@@ -17,16 +17,13 @@ window.onscroll = function() {
     clearTimeout(scrollTimer);
 
     scrollTimer = setTimeout(() => {
-      if (currentScrollDirection === "down") {
-          websiteBanner.style.transform = "translateY(0)";
-      } 
-      else if (currentScrollDirection === "up") {
+      if (currentScrollDirection === "up") {
         websiteBanner.style.transform = "translateY(0)";
       }
   }, scrollDuration);
   }
   else if (currentScrollDirection === "down" && currentScrollPosition >= triggerOffsetTop) {
-     websiteBanner.style.transform = "translateY(-100%)";
+     websiteBanner.style.transform = "translateY(-120%)";
   }
   lastScrollPosition = currentScrollPosition;
 };

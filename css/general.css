@@ -1,35 +1,53 @@
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  font-family: "Poppins-Regular", Century Gothic, sans-serif;
+html {
+  align-items: center;
+  display: flex;
+  font-family: "Poppins-Medium", Century Gothic, sans-serif;
   font-size: 16px;
+  justify-content: center;
+  margin: 0;
+
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
     & > * {
-      width: 100%;
+      margin: 0 auto;
+      width: 80%;
     }
 }
 
 #website-banner {
-  background-color: rgb(32, 32, 32);
+  backdrop-filter: blur(10px);
+  background-color: rgba(32, 32, 32, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   color: rgb(255, 255, 255);
-  height: 15vh;
-  position: fixed;
-  inset: 0 0 auto 0;
   display: flex;
   flex-flow: row wrap;
-  transition: transform 0.3s ease-in-out;
+  height: 15vh;
+  inset: 0 0 auto 0;
+  margin: 0 auto;
+  position: fixed;
   transform: translateY(0);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 1);
+      transform: translateY(-4px);
+      transition: 0.1s ease;
+    }
     & > * {
-      color: rgb(255, 255, 255);
-      width: 100%;  
-      display: flex;
       align-items: center;  
+      color: rgb(255, 255, 255 0.1);
+      display: flex;
       text-transform: uppercase;
+      width: 100%;  
     }
 }
 
 #top-bar {
-  border-bottom: 1px solid rgb(118, 118, 118);
   justify-content: center;
   height: 65%;
 }
@@ -38,21 +56,26 @@ html, body {
   height: 35%;
   margin: 0 auto;
     & ul {
-      width: auto;
-      height: 100%;
-      margin: 0 auto;
+      align-items: start;
       display: flex;
       flex-flow: row wrap;
-      gap: clamp(0.5rem, 1rem, 2rem);
-      font-size: clamp(0.5rem, 1rem, 2rem);;
-      justify-content: center;
-      align-items: center;
+      font-size: 1.3vw;
+      height: 100%;
+      justify-content: space-evenly;
       list-style: none;
-      a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-      }
-    }
+      margin: 0 auto;
+      padding: 0;
+      width: 60%;
+        a {
+          color: rgb(255, 255, 255);
+          padding: 1px 2px;
+          text-decoration: none;
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.1);
+              border-radius: 5px;
+            }
+        }
+      } 
 }
 
 main {
