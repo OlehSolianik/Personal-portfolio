@@ -48,8 +48,24 @@ body {
 }
 
 #top-bar {
-  justify-content: center;
+  display: flex;
+  flex-flow: row nowrap;
   height: 65%;
+    & > :nth-child(1) {
+      width: 25%;
+      height: 100%;
+      
+    }
+    & > :nth-child(2) {
+      width: 50%;
+    }
+    & > :nth-child(3) {
+      width: 25%;
+    }
+    & > * {
+      display: inherit;
+      justify-content: center;
+    }
 }
 
 #navbar {
@@ -80,6 +96,52 @@ body {
 
 main {
   margin-top: 15vh;
+}
+
+#hamburger-menu {
+  display: none;
+  height: 30%;
+  width: 50px;
+  position: relative;
+  margin: auto auto auto 25%;
+  cursor: pointer;
+    & span {
+      height: 5px;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.3s ease;
+        &:nth-child(1) {
+          top: 25%;
+        }
+        &:nth-child(3) {
+          top: 75%;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+  #website-banner {
+    width: 100%;
+  }
+
+  #top-bar {
+    height: 100%;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: flex;
+    align-self: center;
+
+  }
 }
 
 
