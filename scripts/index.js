@@ -1,5 +1,8 @@
-const websiteBanner = document.getElementById('website-banner');
+const websiteBanner = document.getElementById('site-banner');
 const bannerTrigger = document.querySelector('.banner-trigger'); 
+const hamburgerMenuButton = document.getElementById('menu-button');
+const mobileNavbar = document.getElementById('mobile-nav');
+const closeNavbarButton = document.getElementById('mobile-nav-close-btn');
 
 let lastScrollPosition = window.scrollY;
 let currentScrollDirection = null;
@@ -27,3 +30,10 @@ window.onscroll = function() {
   }
   lastScrollPosition = currentScrollPosition;
 };
+
+hamburgerMenuButton.onclick = function() {
+  mobileNavbar.style.display = "flex";
+}
+closeNavbarButton.onclick = function() {
+  mobileNavbar.style.display = "none";
+}
