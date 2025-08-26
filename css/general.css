@@ -100,25 +100,11 @@ main {
   position: relative;
   margin: auto auto auto 25%;
   cursor: pointer;
-    & span {
-      height: 0.25rem;
-      width: 100%;
-      background-color: rgb(255, 255, 255);
-      border-radius: 10px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: transform 0.3s ease;
-        &:nth-child(1) {
-          top: 25%;
-        }
-        &:nth-child(3) {
-          top: 75%;
-        }
+    & svg .line {
+      fill: rgb(255, 255, 255);
     }
-    &:hover span {
-      background-color: rgb(183, 114, 107);
+    &:hover svg .line {
+        fill: rgb(183, 114, 107);
     }
 }
 
