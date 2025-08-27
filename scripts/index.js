@@ -3,6 +3,7 @@ const bannerTrigger = document.querySelector('.banner-trigger');
 const hamburgerMenuButton = document.getElementById('menu-button');
 const mobileNavbar = document.getElementById('mobile-nav');
 const closeNavbarButton = document.getElementById('mobile-nav-close-btn');
+const pageOverlay = document.querySelector('.overlay');
 
 let lastScrollPosition = window.scrollY;
 let currentScrollDirection = null;
@@ -31,9 +32,19 @@ window.onscroll = function() {
   lastScrollPosition = currentScrollPosition;
 };
 
-hamburgerMenuButton.onclick = function() {
+hamburgerMenuButton.onpointerdown = function() {
   mobileNavbar.style.display = "flex";
+  pageOverlay.style.display = "block";
+  pageOverlay.style.pointerEvents = "auto";
 }
-closeNavbarButton.onclick = function() {
+closeNavbarButton.onpointerdown = function() {
   mobileNavbar.style.display = "none";
+  pageOverlay.style.display = "none";
+  pageOverlay.style.pointerEvents = "none";
+}
+
+pageOverlay.onpointerdown = function() {
+  mobileNavbar.style.display = "none";
+  pageOverlay.style.display = "none";
+  pageOverlay.style.pointerEvents = "none";
 }

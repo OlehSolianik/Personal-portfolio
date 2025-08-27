@@ -9,6 +9,7 @@
     <title>Oleh Solianik</title>
   </head>
   <body>
+    <div class="overlay"></div>
     <header id="site-banner" role="banner">
       <div id="top-bar">
         <div>
@@ -34,11 +35,14 @@
     </header>
     <nav id="mobile-nav">
       <div id="mobile-nav-top">
-        <div id="mobile-nav-close-btn">X</div>
+        <svg id="mobile-nav-close-btn" viewBox="0 0 24 24" width="40" height="32">
+            <rect class="line" x="2" y="10.5" width="20" height="3" rx="1.5" transform="rotate(45 12 12)"/>
+            <rect class="line" x="2" y="10.5" width="20" height="3" rx="1.5" transform="rotate(-45 12 12)"/>
+        </svg>
       </div>
       <ul>
         <div class="mobile-nav-item">
-          <li><a href="biography.html">About</a></li>
+          <li><a href="#">About</a></li>
           <div class="forward-link"><a href="biography.html" >></a></div>
         </div>
         <div class="mobile-nav-item">

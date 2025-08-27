@@ -16,6 +16,7 @@ body {
 
 main {
   margin-top: 15vh;
+  transition: filter 0.3s ease;
 }
 
 #site-banner {
@@ -32,7 +33,7 @@ main {
   position: fixed;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  z-index: 5;
+  z-index: 10;
     &:hover {
       box-shadow: 0 12px 32px rgba(69, 25, 21, 1);    
       transform: translateY(-4px);
@@ -110,6 +111,7 @@ main {
 
 @media (max-width: 768px) {
   #site-banner {
+    box-shadow: 0 12px 32px rgba(69, 25, 21, 1);
     width: 100%;
   }
 
@@ -128,6 +130,7 @@ main {
 
 #mobile-nav {
   position: fixed;
+  border-radius: 0 0 10px 10px;
   z-index: 50;
   height: 35vh;
   width: 100vw;
@@ -137,19 +140,14 @@ main {
   justify-items: center;
   background-color: rgb(69, 25, 21);
   border: 1px solid rgba(69, 25, 21, 0.05);;
-  box-shadow: 0 8px 24px rgba(69, 25, 21, 0.15);
-    &:hover {
-      box-shadow: 0 12px 32px rgba(69, 25, 21, 1);    
-      transform: translateY(-4px);
-      transition: 0.1s ease;
-    }
+  box-shadow: 0 12px 32px rgba(69, 25, 21, 1);
     & ul {
       text-transform: uppercase;
       display: flex;
       flex-flow: row wrap;
       font-size: 2.5vh;
       list-style: none;
-      padding: 0;
+      padding-left: 15px;
       margin: 0 0 0 5%;
       width: 100%;
       align-items: center;
@@ -158,10 +156,13 @@ main {
           width: 100%;
           display: flex;
           flex-direction: row;
-            &:click {
+            &:hover {
               a {
                 color: rgb(183, 114, 107);
               }
+            &:touchend {
+              background-color: aqua;
+            }
             }
         li, .forward-link {
           height: 25%;
@@ -189,14 +190,32 @@ main {
   align-items: center;
   width: 25%;
   height: 15vh;
-  & div {
+  & #mobile-nav-close-btn {
   height: 2rem;
   width: 2.5rem;
-  max-width: 3rem;
+  max-width: 2.5rem;
   max-height: 2rem;
   margin: auto auto auto 25%;
   cursor: pointer;
   }
+  & svg .line {
+    fill: rgb(255, 255, 255);
+  }
+  &:hover svg .line {
+    fill: rgb(183, 114, 107);
+  }
+}
+
+.overlay {
+  width: 100%;
+  position: fixed;
+  inset: 0 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  display: none;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 8;
 }
 
 
