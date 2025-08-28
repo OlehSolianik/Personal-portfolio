@@ -5,18 +5,43 @@ html {
 }
 
 body {
+  background-color: brown;
   height: 100%;
   margin: 0;
   width: 100%;
     & > * {
       margin: 0 auto;
-      width: 80%;
+      width: 100%;
     }
 }
 
 main {
   margin-top: 15vh;
   transition: filter 0.3s ease;
+}
+
+.highlighted-text-6 {
+  font-size: 1.25rem;  
+}
+
+.highlighted-text-5 {
+  font-size: 1.56rem;
+}
+
+h4 {
+  font-size: 1.95rem;
+}
+
+h3 {
+  font-size: 2.44rem;
+}
+
+h2 {
+  font-size: 3.05rem;
+}
+
+h1 {
+  font-size: 3.82rem;
 }
 
 #site-banner {
@@ -33,6 +58,7 @@ main {
   position: fixed;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 80%;
   z-index: 10;
     &:hover {
       box-shadow: 0 12px 32px rgba(69, 25, 21, 1);    
@@ -160,9 +186,6 @@ main {
               a {
                 color: rgb(183, 114, 107);
               }
-            &:touchend {
-              background-color: aqua;
-            }
             }
         li, .forward-link {
           height: 25%;

@@ -1,45 +1,59 @@
-.skillset {
-  align-content: center;
+#skillset {
   background-color: white;
-  height: 500px;
-}
-
-.skillset-container {
-  border: 1px solid black;
-  color: black;
-  display: flex;
-  flex-flow: row wrap;
-  height: 80%;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 70%;
-}
-
-.skillset-header {
-  border: 1px solid black;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  height: 25%;
-  width: 100%;
-  & * {
-    display: inherit;
-    justify-content: center;
+  column-gap: 25px;
+  padding: 25px;
+}
+
+#skillset-header {
+  flex: 1 1 100%;
+  text-align: center;  
+  margin-bottom: 10px; 
+  & p {
+    margin: 0;
+    color: rgb(105, 105, 105);
+  }
+  & h2 {
+    margin: 0;
   }
 }
 
-.skillset-header-sub {
-  align-items: bottom;
-  color: rgb(118, 118, 118);
-  font-size: 20px;
-  height: 30%;
-  margin: 0;
-  width: 100%;
+.skills-group {
+  box-sizing: border-box;
+  border: 2px solid rgb(105, 105, 105);
+  border-radius: 15px;
+  flex: 1 1 calc(50% - 13px);
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  padding: 15px;
+  justify-content: space-evenly;
+    & .skills-group-name {
+      text-align: center;
+      flex: 1 1 100%;
+      color: rgb(105, 105, 105);
+    }
 }
 
-.skillset-header-main {
-  align-self: top;
-  font-size: 35px;
-  font-size: 35px;
+.skills-group-item {
+  border: 1px solid black;
   margin: 0;
+  flex: 1 1 calc(50% - 22px);
+  display: flex;
+    & a {
+      color: rgb(105, 105, 105);
+    }
+}
+
+@media (max-width: 768px) {
+  #skillset > :nth-child(3) {
+    flex: 1 1 100%;
+  }
+}
+
+img { 
+  width: 100px;
+  height: 100%px;
 }
