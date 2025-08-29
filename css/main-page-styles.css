@@ -38,12 +38,17 @@
 }
 
 .skills-group-item {
-  border: 1px solid black;
+  border-radius: 10px;
   margin: 0;
   flex: 1 1 calc(50% - 22px);
   display: flex;
+    &:hover {
+      background-color: #F0F2F5;
+    }
     & a {
-      color: rgb(105, 105, 105);
+      color: #0D6EFD;
+      text-decoration: none;
+      
     }
 }
 
