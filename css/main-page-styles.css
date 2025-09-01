@@ -1,5 +1,4 @@
 #skillset {
-  background-color: white;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -20,10 +19,11 @@
   }
 }
 
-.skills-group {
+.skills-group {  
+  background: linear-gradient(180deg, rgb(234,240,242), rgb(236,241,244), rgb(236,241,245), rgb(233,243,251), rgb(227,235,244), rgb(229,237,246), rgb(228,239,246));
   box-sizing: border-box;
-  border: 2px solid rgb(105, 105, 105);
-  border-radius: 15px;
+  border: 1px solid rgb(147, 151, 153, 0.5);
+  border-radius: 4px;
   flex: 1 1 calc(50% - 13px);
   display: flex;
   flex-flow: row wrap;
@@ -38,16 +38,19 @@
 }
 
 .skills-group-item {
-  border-radius: 10px;
+  border-radius: 4px;
   margin: 0;
   flex: 1 1 calc(50% - 22px);
   display: flex;
     &:hover {
-      background-color: #F0F2F5;
+      background-color: rgb(249,252,253);
     }
     & a {
-      color: #0D6EFD;
+      color: rgb(0,103,192);
       text-decoration: none;
+      &:hover {
+        color: rgb(0,62,146);
+      }
       
     }
 }
