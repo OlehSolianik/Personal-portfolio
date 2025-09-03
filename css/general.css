@@ -80,21 +80,27 @@ h1 {
 }
 
 #additional {
-  align-content: center;
-  width: 30%;
+  align-items: center;
+  align-self: center;
+  height: 75%;
+  width: 20%;
+  margin-right: 5%;
+  justify-content: center;
+  gap: 0.5rem;
   & svg {
-    width: auto;
+    width: 100%;
     height: 100%;
+    object-fit: contain;
   }
   & a {
-    width: 25%;
-    height: 100%;
+    width: 4vw;
+    height: 5vh;
   }
 }
 
 
 #nav-bar {
-  width: 60%;
+  width: 65%;
   justify-content: start;
     & ul {
       display: flex;
