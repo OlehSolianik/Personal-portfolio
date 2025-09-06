@@ -1,9 +1,12 @@
+section {
+  padding: 25px;
+}
+
 #skillset {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   column-gap: 25px;
-  padding: 25px;
 }
 
 #skillset-header {
@@ -46,11 +49,15 @@
       background-color: rgb(249,252,253);
     }
     & a {
-      color: rgb(0,103,192);
+      background: linear-gradient(90deg, rgba(1, 46, 201, 1.00), rgba(14, 112, 245, 1.00), rgba(35, 156, 253, 1.00));
+      width: fit-content;
+      padding: 10px;
+      border-radius: 4px;
+      color: white;
       text-decoration: none;
-      &:hover {
+      /*&:hover {
         color: rgb(0,62,146);
-      }
+      }*/
       
     }
 }
@@ -63,5 +70,51 @@
 
 img { 
   width: 100px;
-  height: 100%px;
+  height: 100px;
 }
+
+/*Hero section styles*/
+
+#hero {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  & h1 {
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  & p {
+    color: rgb(105, 105, 105);
+  }
+  & span {
+    background: linear-gradient(90deg, rgba(1, 46, 201, 1.00), rgba(14, 112, 245, 1.00), rgba(35, 156, 253, 1.00));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  & a {
+    text-decoration: none;
+  }
+}
+
+#more {
+  color: rgba(1, 46, 201, 1.00);
+}
+
+#playBtn {
+  background: linear-gradient(90deg, rgba(1, 46, 201, 1.00), rgba(14, 112, 245, 1.00), rgba(35, 156, 253, 1.00));
+  width: fit-content;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+}
+
+#cvBtn {
+  background: white;
+  width: fit-content;
+  padding: 9px;
+  border-radius: 4px;
+  color: rgba(1, 46, 201, 1.00);
+  border: 1px solid rgba(1, 46, 201, 1.00);
+  margin-left: 2.5%;
+}
+

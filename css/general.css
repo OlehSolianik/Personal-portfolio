@@ -2,26 +2,25 @@ html {
   display: flex;
   font-family: "Poppins-Medium", Century Gothic, sans-serif;
   font-size: 16px;
-
 }
 
 body {
-  background-color: rgb(255,255,255);
-  color: rgb(37,39,40);
+  color: rgb(0, 0, 0);
   height: 100%;
   margin: 0;
   width: 100%;
     & > * {
       margin: 0 auto;
-      width: 100%;
     }
 }
 
 .interactive-item:hover {
-  background-color: rgba(249,252,253, 0.8);
+  background-color: rgba(249, 252, 253, 0.8);
   border: 1px solid rgba(147, 151, 153, 0.2);
-  border-radius: 4px;
+  border-radius: 5px;
 }
+
+
 
 main {
   margin-top: 10vh;
@@ -54,7 +53,7 @@ h1 {
 
 #site-banner {
   backdrop-filter: blur(20px);
-  background: linear-gradient(90deg, rgb(222,236,237, 0.7), rgb(225,238,247 , 0.7), rgb(224,241,247, 0.7), rgb(224,231,239, 0.7));
+  background: linear-gradient(90deg, rgba(222, 236, 237, 0.75), rgba(225, 238, 247, 0.75), rgba(224, 241, 247, 0.75), rgba(224, 231, 239, 0.75));
   border: 1px solid rgba(147, 151, 153, 0.3);
   display: flex;
   flex-flow: row nowrap;
@@ -66,25 +65,25 @@ h1 {
   z-index: 10;
     & > * {
       align-items: center;  
+      align-self: center;
       display: flex;
       justify-content: center; 
+      height: 70%;
     }
 }
 
 #menu-button-container {
-  display: none;
+  width: 10%;
 }
 
 #site-logo {
-  width: 10%;
+  width: 20%;
 }
 
 #additional {
   align-items: center;
-  align-self: center;
   height: 75%;
   width: 20%;
-  margin-right: 5%;
   justify-content: center;
   gap: 0.5rem;
   & svg {
@@ -100,17 +99,17 @@ h1 {
 
 
 #nav-bar {
-  width: 65%;
-  justify-content: start;
+  width: 50%;
+  justify-content: flex-start;
     & ul {
       display: flex;
       flex-flow: row nowrap;
-      font-size: 1.4vw;
+      font-size: 1rem;
       justify-content: space-between;
       list-style: none;
       margin: 0;
-      padding: 5px;
       width: 50%;
+      height: 100%;
       a {
         color: black;
         padding: 1px 2px;
@@ -120,7 +119,6 @@ h1 {
 }
 
 #menu-button {
-  display: none;
   height: 2rem;
   width: 2.5rem;
   max-width: 3rem;
@@ -239,7 +237,7 @@ h1 {
   display: none;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 8;
+  z-index: 5;
 }
 
 
