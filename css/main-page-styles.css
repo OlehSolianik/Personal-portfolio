@@ -6,7 +6,7 @@ section {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  column-gap: 25px;
+  gap: 25px;
 }
 
 #skillset-header {
@@ -27,7 +27,7 @@ section {
   box-sizing: border-box;
   border: 1px solid rgb(147, 151, 153, 0.5);
   border-radius: 4px;
-  flex: 1 1 calc(50% - 13px);
+  flex: 1 1 45%;
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
@@ -55,16 +55,12 @@ section {
       border-radius: 4px;
       color: white;
       text-decoration: none;
-      /*&:hover {
-        color: rgb(0,62,146);
-      }*/
-      
     }
 }
 
 @media (max-width: 768px) {
-  #skillset > :nth-child(3) {
-    flex: 1 1 100%;
+  .skills-group {
+    column-gap: 0;
   }
 }
 
@@ -79,6 +75,7 @@ img {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  padding-bottom: 50px;
   & h1 {
     line-height: 1;
     margin-bottom: 0;

@@ -49,8 +49,7 @@ pageOverlay.onpointerdown = function() {
   pageOverlay.style.pointerEvents = "none";
 }
 
-document.getElementById("playBtn").addEventListener("click", function(e) {
-  e.preventDefault();
+document.getElementById("playBtn").addEventListener("click", function() {
   const introVideo = document.getElementById("introduction-video");
   introVideo.play();
 });

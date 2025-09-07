@@ -2,6 +2,7 @@ html {
   display: flex;
   font-family: "Poppins-Medium", Century Gothic, sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -54,6 +55,9 @@ h1 {
 #site-banner {
   backdrop-filter: blur(20px);
   background: linear-gradient(90deg, rgba(222, 236, 237, 0.75), rgba(225, 238, 247, 0.75), rgba(224, 241, 247, 0.75), rgba(224, 231, 239, 0.75));
+  
+  /*background: linear-gradient(90deg, rgba(152,184,209,255), rgba(168,194,217,255), rgba(182,207,225,255), rgba(188,211,226,255), rgba(182,207,225,255), rgba(168,194,217,255), rgba(152,184,209,255));*/
+
   border: 1px solid rgba(147, 151, 153, 0.3);
   display: flex;
   flex-flow: row nowrap;
